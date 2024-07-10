@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-card">
+        <h3>Weather App</h3>
+        <select id="city-select">
+          <option value="">Select a city</option>
+          <option value="New York">New York</option>
+          <option value="London">London</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="Paris">Paris</option>
+          <option value="Sydney">Sydney</option>
+          <option value="Berlin">Berlin</option>
+          <option value="Moscow">Moscow</option>
+          <option value="Toronto">Toronto</option>
+          <option value="Beijing">Beijing</option>
+          <option value="Mumbai">Mumbai</option>
+        </select>
+        <button
+          id="city-select-btn"
+          onclick="weatherFn($('#city-select').val())"
+        >
+          Get Weather
+        </button>
+        <div id="weather-info" class="animate__animated animate__fadeIn">
+          <h3 id="city-name"></h3>
+          <p id="date"></p>
+          <img id="weather-icon" src="" alt="Weather Icon" />
+          <p id="temperature"></p>
+          <p id="description"></p>
+          <p id="wind-speed"></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="script2.js"></script>
+  </body>
+</html>
